@@ -1,0 +1,139 @@
+/* Global styles */
+
+body {
+  background-color: #f0f4fc;
+  margin: 0;
+  padding-top: 75px;
+  box-sizing: border-box;
+}
+
+/* Main container with full width */
+.comparison-container {
+  width: 96.3vw;
+  color:#1a202c;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Title styling */
+.title {
+  margin-left: 8px;
+  text-align:left;
+  color: #1a202c;
+  margin-bottom: 30px;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* Filters section for the new layout */
+.filters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns for dropdowns */
+  gap: 25px 15px; /* Larger vertical gap for zip code alignment */
+  justify-items: center; /* Center-align items in their grid cells */
+  margin-bottom: 20px;
+}
+
+/* Group dropdowns and zip codes */
+.filter-group {
+  display: grid;
+  grid-template-rows: auto auto; /* Stack items vertically */
+  gap: 12px; /* Increased gap for space between dropdown and zip code */
+  width: 100%; /* Full width for responsiveness */
+  /* max-width: 220px; Ensure consistent size for dropdowns and inputs */
+}
+
+/* Style for dropdowns and zip code inputs */
+.filter,
+.filter-input {
+  padding: 8px 10px; /* Reduced padding for consistent height */
+  border: 1px solid #d1d5db;
+  border-radius: 30px;
+  font-size: 14px;
+    color: #1a202c;
+  background-color: #fff;
+  width: 100%; /* Full width inside the grid */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visual appeal */
+}
+
+.filter-input {
+  width: 94%;
+  padding: 10px; /* Slightly larger padding for input fields */
+}
+
+/* Adjusted height for Parcel Weight and Item Type */
+.filter {
+  height: 40px;
+  padding: 6px 10px; /* Reduced padding for height consistency */
+}
+
+/* Add hover effect for better interactivity */
+.filter:hover,
+.filter-input:hover {
+  background-color: antiquewhite;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Increased width for Destination dropdown */
+.a1{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Results table styles */
+.results-table {
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 15px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-header {
+  background-color: #f9fafb;
+  font-weight: bold;
+}
+
+.table-row:nth-child(even) {
+  background-color: #f1f5f9;
+}
+
+.table-row:hover {
+  background-color: #e2e8f0;
+}
+
+.table-row span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Adjust responsiveness */
+@media (max-width: 1024px) {
+  .filters {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+      gap: 20px;
+  }
+
+  .filter-group {
+      max-width: 100%; /* Allow full width stacking */
+  }
+}
+
+@media (max-width: 768px) {
+  .filters {
+      grid-template-columns: 1fr; /* Single column for smaller screens */
+      gap: 20px;
+  }
+
+
+}
